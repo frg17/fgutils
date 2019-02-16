@@ -5,7 +5,7 @@
     extern "C" {
 #endif
 
-char *fgReadFile(char *filename);
+const char *fgReadFile(char *filename);
 
 #ifdef __cplusplus
     }

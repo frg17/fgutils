@@ -10,10 +10,10 @@
  * @parameter char *fileName: Name of file to read.
  * @return char*: String with contents of file.
  */
-char *fgReadFile(char *fileName) {
+const char *fgReadFile(char *fileName) {
     int rc = 0;
     int fLength = 0;
-    char *contents = NULL;
+    char* contents;
 
     FILE *f = fopen(fileName, "r");
     if(!f) goto error;
@@ -29,7 +29,6 @@ char *fgReadFile(char *fileName) {
     fread(contents, sizeof(char), fLength, f);
     fclose(f);
     
-    contents[fLength] = '\0';
     return contents;
 
 error:

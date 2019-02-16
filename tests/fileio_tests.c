@@ -2,7 +2,7 @@
 #include "fgutils/logs.h"
 
 int main() {
-    char *file = fgReadFile("Makefile");
+    const char *file = fgReadFile("Makefile");
     fgLog("\n%s", file);
     
     return 0;
