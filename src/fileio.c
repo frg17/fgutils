@@ -10,7 +10,7 @@
  * @parameter char *fileName: Name of file to read.
  * @return char*: String with contents of file.
  */
-const char *fgReadFile(char *fileName) {
+const char *fgReadFile(const char *fileName) {
     int rc = 0;
     int fLength = 0;
     char* contents;
